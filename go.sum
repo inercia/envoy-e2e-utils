@@ -589,8 +589,8 @@ github.com/inconshreveable/mousetrap v1.0.0/go.mod h1:PxqpIevigyE2G7u3NXJIT2ANyt
 github.com/inercia/kubernetes-e2e-utils v0.0.0-20220706100256-fb4c9cc55aa4/go.mod h1:2Kbe0ZQRxq3E0J1fuiA2f3Zpk1WDL2NYVTM5CR3pbto=
 github.com/inercia/kubernetes-e2e-utils v0.0.0-20220707165028-d70af38e4226 h1:NiiRbcbl1YR4VTpPvzaW6B2rW+OzBiZri0KMRTvNpp0=
 github.com/inercia/kubernetes-e2e-utils v0.0.0-20220707165028-d70af38e4226/go.mod h1:PVxguY3pN/QwnWeveXi4uQjz0TAJBkoeouLXJ86UM94=
-github.com/inercia/kubetnl v0.0.0-20220711074649-4e62bb7ddedc h1:DO3BtZSfP8EB/+fUcQh5bC9+Wm3dOod32XJFaYwCWlQ=
-github.com/inercia/kubetnl v0.0.0-20220711074649-4e62bb7ddedc/go.mod h1:OVThJQYYChFg79bRwNo/hLCGO5NS44ZUxLO4AD/S8Bg=
+github.com/inercia/kubetnl v0.0.0-20220711145606-40f8ab2b8ad1 h1:UEqUoiIXBLRh0C9BM2cdA8BgC0dxn5a44WHpSjjLLoc=
+github.com/inercia/kubetnl v0.0.0-20220711145606-40f8ab2b8ad1/go.mod h1:OVThJQYYChFg79bRwNo/hLCGO5NS44ZUxLO4AD/S8Bg=
 github.com/intel/goresctrl v0.2.0/go.mod h1:+CZdzouYFn5EsxgqAQTEzMfwKwuc0fVdMrT9FCCAVRQ=
 github.com/j-keck/arping v0.0.0-20160618110441-2cf9dc699c56/go.mod h1:ymszkNOg6tORTn+6F6j+Jc8TOr5osrynvN6ivFWZ2GA=
 github.com/j-keck/arping v1.0.2/go.mod h1:aJbELhR92bSk7tp79AWM/ftfc90EfEi2bQJrbBFOsPw=

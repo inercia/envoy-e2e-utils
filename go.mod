@@ -5,7 +5,7 @@ go 1.16
 require (
 	github.com/envoyproxy/go-control-plane v0.10.3
 	github.com/inercia/kubernetes-e2e-utils v0.0.0-20220707165028-d70af38e4226
-	github.com/inercia/kubetnl v0.0.0-20220711074649-4e62bb7ddedc
+	github.com/inercia/kubetnl v0.0.0-20220711145606-40f8ab2b8ad1
 	sigs.k8s.io/e2e-framework v0.0.7
 )
 
