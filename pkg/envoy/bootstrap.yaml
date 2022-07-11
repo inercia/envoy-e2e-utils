@@ -1,0 +1,55 @@
+# Base config for an ADS management server on {{ .ADSPort }}
+admin:
+  access_log_path: /dev/null
+  address:
+    socket_address:
+      address: 0.0.0.0
+      port_value: {{ .AdminPort }}
+
+dynamic_resources:
+  ads_config:
+    # allows limiting the rate of discovery requests.
+    # for edge cases with very frequent requests or due to a bug.
+    rate_limit_settings:
+      max_tokens: 10
+      fill_rate: 3
+    api_type: GRPC
+    transport_api_version: V3
+    set_node_on_first_message_only: true
+    grpc_services:
+    - envoy_grpc:
+        cluster_name: xds_cluster
+  lds_config:
+    resource_api_version: V3
+    ads: {}
+  cds_config: 
+    resource_api_version: V3
+    ads: {}
+
+node:
+  cluster: {{ .ClusterID }}
+  id: {{ .NodeID }}
+
+static_resources:
+  clusters:
+  - connect_timeout: 1s
+    # as we are using gRPC xDS we need to set the cluster to use http2
+    http2_protocol_options: {}
+    upstream_connection_options:
+      # important:
+      # configure a TCP keep-alive to detect and reconnect to the admin
+      # server in the event of a TCP socket half open connection
+      # the default values are very conservative, so you will want to tune them.
+      tcp_keepalive: {}
+    name: xds_cluster
+    type: LOGICAL_DNS
+    dns_lookup_family: V4_ONLY
+    load_assignment:
+      cluster_name: xds_cluster
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                address: {{ .ADSAddress }}
+                port_value: {{ .ADSPort }}
